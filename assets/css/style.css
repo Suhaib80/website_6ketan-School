@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Poppins&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Poppins&family=Sacramento&display=swap');
 
 *{
     margin: 0;
@@ -11,7 +12,13 @@
 .text-orange{color: #EA512E;}
 .text-silver{color: #6B6B84;}
 .bg-orange{background: #EA512E;}
+.bg-light-orange{background: #fdf6ed;}
+.bg-light-yellow{background: #fee9ca;}
 .bg-yellow{background: #f5890d !important;}
+.fs-22{font-size: 22px;}
+.fs-21{font-size: 21px;}
+.fw-6{font-weight: 600;}
+.fw-4{font-weight: 400;}
 .btn{
     color: #fff;
     font-size: 16px;
@@ -36,14 +43,49 @@ p{
     font-weight: 400;
     font-family: "Roboto", sans-serif;
 }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    color: #1B0238;
+    font-weight: bold;
+    font-family: "Cataraman", sans-serif;
+}
 .mt-10{margin-top: 100px;}
 .mt-15{margin-top: 150px;}
 .mt-20{margin-top: 200px;}
+.pt-100{padding-top: 100px;}
+.pb-70{padding-bottom: 70px;}
+.pb-100{padding-bottom: 100px;}
+
+img{
+    height: auto;
+    max-width: 100%;
+    display: inline-block;
+}
 /* Universal css End */
 
 /* Header Section Start */
 header nav ul li{
     padding: 0px 5px;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+    margin-top: 10px;
+}
+a.nav-link:hover,
+a.dropdown-item:hover{
+    transition: 0.2s linear;
+    color: #EA512E !important;
+    background: none;
+}
+.dropdown-menu{
+    width: 280px;
+    border: none;
+    background: #fff;
+    border-radius: 0px;
+    transition: all 4s ease-in-out;
+    box-shadow: 0px 0px 15px 0px #ccc;
+}
+.dropdown-menu li{
+    height: 40px;
 }
 /* Header Section End */
 
@@ -72,24 +114,347 @@ header nav ul li{
     top: 3.5%;
     left: .7%;
     animation: move 2s linear alternate infinite;
-}.shape-2{
+}
+.shape-2{
     top: 3.5%;
     left: 50%;
     animation: move2 2s linear alternate infinite;
-}.shape-3{
+}
+.shape-3{
     top: 75%;
     left: .7%;
     z-index: 9;
     animation: move 2s linear alternate infinite;
-}.shape-1{
-    top: 3.5%;
-    left: .7%;
-    animation: move 2s linear alternate infinite;
+}
+.shape-4{
+    bottom: 0;
+    left: 47%;
+    z-index: 1;
+    animation: move4 2s linear alternate infinite;
 }
 .edu-girl img{
     height: 95%;
 }
 /* Hero Section End */
+
+/* Who we are Section Start */
+.who span,
+.popular .cla,
+.teacher span,
+.upcoming span,
+.core-value span,
+.latest-news .spane,
+.testimonial span{
+    font-size: 20px;
+    color: #EA512E;
+    font-weight: 600;
+    font-family: 'Sacramento', cursive;
+}
+.shape-5{
+    top: 3.5%;
+    right: .7%;
+    animation: move5 2s linear alternate infinite;
+}
+.who h3,
+.popular h3,
+.teacher h3,
+.upcoming h3,
+.core-value h3,
+.latest-news h3,
+.testimonial h3{
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.who-we .who-p{
+    margin-bottom: 20px;
+}
+.who ul li{
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.who ul li span{
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 6px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.5s;
+    background: #EA512E;
+    display: inline-block;
+    font-family: "Catamaran", sans-serif;
+}
+.who ul li:hover span{
+    background: #f5890d;
+    transition: all 1s ease-in;
+}
+.who .image{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.who .image img{
+    padding: 20px;
+    border-radius: 50%;
+}
+.who .image::before{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #EA512E;
+    animation: border-transform-default 10s linear infinite alternate forwards;
+}
+.who .image::after{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #f5890d;
+    animation: border-transform-default 50s linear infinite alternate forwards;
+}
+/* Who we are Section End */
+
+/* Popular Section Start */
+.popular .card:hover img{
+    transform: rotate(2deg) scale(1.07);
+    transition: all 0.3s linear;
+}
+.popular .card .dbutton{
+    top: 0px;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 0px 0px 0px 7px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.5s ease;
+    background: #EA512E;
+    display: inline-block;
+}
+.popular .card:hover a{
+    color: #EA512E !important;
+    transition: all 0.2s;
+}
+.popular .card:hover .dbutton,
+.popular .card:hover button{
+    background: #f5890d;
+}
+/* Popular Section End */
+
+/* Core Value Section Start */
+.core-value .number{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #1B0238;
+    margin-top: 1.5%;
+    transition: 0.5s;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    outline-offset: 2px;
+    display: inline-block;
+    border: 3px solid #fff;
+    outline: 1px solid #e5e4e4;
+    font-family: "Catamaran", sans-serif;
+}
+.core-value .number:hover{
+    color: #fff;
+    transition: 0.5s;
+    outline-color: #EA512E;
+    background: #EA512E !important;
+}
+/* Core Value Section End */
+
+/* Core Teacher Section Start */
+.teacher{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background: url(../img/teacher-bg.jpg);
+    z-index: -9 !important;
+}
+.teacher .teacher-image{
+    z-index: 9 !important;
+}
+.teacher .social-media{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: -70px;
+    transition: all 0.5s ease-in;
+}
+.teacher .teacher-image::before{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #EA512E;
+    animation: border-transform-default 5s linear infinite alternate forwards;
+}
+.teacher .teacher-image:hover .social-media{
+    margin-bottom: 0px;
+    transition: all 0.5s ease-out;
+}
+.teacher .social-media li{
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    background-color: #EA512E;
+}
+.teacher .social-media li a{
+    color: #fff;
+}
+.teacher .social-media li:hover{
+    background: #f5890d;
+    transition: 0.3s ease;
+}
+/* Core Teacher Section End */
+
+/* Testimonial Section Start */
+.card.teacher{
+    height: auto;
+    border: none;
+    padding: 30px;
+    line-height: 75px;
+    text-align: center;
+    border-radius: 49%;
+    background-color: #fee9ca;
+}
+.card.teacher div{
+    width: 60px;
+    height: auto;
+    margin: auto;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: all 0.3s linear;
+}
+.card.teacher:hover div{
+    background: #EA512E;
+    transition: all 0.3s linear;
+}
+.card.teacher:hover div .fa-quote-left{
+    color: #fff;
+    transition: all 0.3s linear;
+}
+.testimonial .nav-button button{
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-size: 40px;
+    line-height: 10px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: -40px;
+    margin-right: -40px;
+    background: #EA512E;
+    transition: 0.3s linear;
+}
+.testimonial .nav-button button:hover{
+    background: #f5890d;
+    transition: 0.3s linear;
+}
+/* Testimonial Section End */
+
+/* Upcoming Event Section Start */
+.upcoming{
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background: url(../img/event-bg.jpg);
+}
+/* Upcoming Event Section End */
+
+/* Latest News Section Start */
+
+/* Latest News Section End */
+.latest-news .card:hover img{
+    transform: rotate(2deg) scale(1.07);
+    transition: all 0.3s linear;
+}
+.latest-news .card:hover a{
+    transition: all 0.2s;
+    color: #EA512E !important;
+}
+/* Footer Section Start */
+footer{
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+     url(../img/footer-bg.jpg);
+}
+footer .social{
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    background: #EA512E;
+}
+footer h3::before{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: #EA512E;
+}
+footer .contact a:hover{
+    transition: 0.5s;
+    color: #EA512E !important;
+}
+footer .contact a::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    transition: 0.5s;
+}
+footer .contact a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+    background-color: #EA512E;
+}
+/* Footer Section End */
 
 
 
@@ -101,4 +466,20 @@ header nav ul li{
 @keyframes move2 {
     0%{}
     100%{left:53%;}
+}
+@keyframes move4 {
+    0%{}
+    100%{bottom:3%;}
+}
+@keyframes move5 {
+    0%{}
+    100%{right:3%;}
+}
+@keyframes border-transform-default{
+    0%, 100%{
+        border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+    }
+    14%{
+        border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+    }
 }
